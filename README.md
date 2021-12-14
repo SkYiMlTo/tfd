@@ -4,14 +4,12 @@ TFD is an accronym, it means @technoflexdetente
 It's a group you can find on social network like:<br />
 Facebook pages:<br />
 - https://www.facebook.com/technoflexdetente<br />
-- https://www.facebook.com/tfdrecords<br />
 
 Facebook group:<br />
 - https://www.facebook.com/groups/750514048382081<br />
 
 Instagram:<br />
 - https://www.instagram.com/technoflexdetente/<br />
-- https://www.instagram.com/technoflexbackup/<br />
 
 Spotify:<br />
 https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4<br />
