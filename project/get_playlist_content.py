@@ -65,8 +65,8 @@ def get_token():
     # POST
     auth_response = requests.post(AUTH_URL, {
         'grant_type': 'client_credentials',
-        'client_id': '58d8a0730d2144e48ddea65b6033ad39',
-        'client_secret': '87ac3f4c385244448cb02b728ab4b9ed',
+        'client_id': 'id',
+        'client_secret': 'secret',
         'scope': 'playlist-modify-public playlist-modify-private'
     })
 
@@ -119,10 +119,10 @@ def refresh_access_token():
     import requests
 
     data = {
-        'client_id': '7c237c11ac7b498e9454371d425cb2e4',
-        'client_secret': '5d4d2a40084b4bbf91c43d3b53c89088',
+        'client_id': 'id',
+        'client_secret': 'secret',
         'grant_type': 'refresh_token',
-        'refresh_token': 'AQDLPAgQLMGNVN9HNz7uwxPc6BT9ovxfCyo1qTmL2_GbLyskq2PXHjlk4JlgXf__WMsjj092LfKR7P3snDd5-zGhwC0b2MYCHG5W57VLRJrgvkSJurByWuIXwR6Mw1nfofg'
+        'refresh_token': 'refresh_token'
     }
 
     response = requests.post('https://accounts.spotify.com/api/token', data=data)

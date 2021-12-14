@@ -3,8 +3,8 @@ import requests
 # AUTH_URL = 'https://accounts.spotify.com/api/token'
 # auth_response = test_requests.post(AUTH_URL, {
 #     'grant_type': 'client_credentials',
-#     'client_id': '58d8a0730d2144e48ddea65b6033ad39',
-#     'client_secret': '87ac3f4c385244448cb02b728ab4b9ed',
+#     'client_id': 'id',
+#     'client_secret': 'secret',
 #     'scope': 'playlist-modify-public playlist-modify-private'
 # })
 # # convert the response to JSON
@@ -18,7 +18,7 @@ import requests
 headers = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer BQDfM9tTmR4MKRQZe-OyYecJHxZvgfZww4STvpVK6grLvbY2KDSVTWq2KD1ncFjmMF7_lieNCIG7awayhdUUkhmFSerEHzor4R0rkMNjg5sgwGVf57WN1Lqz_VGT4NXIYrpldvFyKMCUF8oN_PH94fOmk8b2HAoEBTe5RkiPaSrxC1ABeho2qFZ5KjqOnMTfvB0ImONRW4Bj1PLzXGASulns',
+    'Authorization': 'Bearer access_token',
 }
 
 params = (

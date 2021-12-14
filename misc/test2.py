@@ -4,7 +4,7 @@ import random
 
 from spotipy import oauth2
 
-token = oauth2.SpotifyClientCredentials(client_id='58d8a0730d2144e48ddea65b6033ad39', client_secret='87ac3f4c385244448cb02b728ab4b9ed')
+token = oauth2.SpotifyClientCredentials(client_id='id', client_secret='secret')
 
 cache_token = token.get_access_token()
 spotify = spotipy.Spotify(cache_token)

@@ -1,10 +1,10 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 
-#SPOTIPY_CLIENT_ID = '58d8a0730d2144e48ddea65b6033ad39'
-#SPOTIPY_CLIENT_SECRET = '87ac3f4c385244448cb02b728ab4b9ed'
+#SPOTIPY_CLIENT_ID = 'id'
+#SPOTIPY_CLIENT_SECRET = 'secret'
 
-auth_manager = SpotifyClientCredentials('58d8a0730d2144e48ddea65b6033ad39', '87ac3f4c385244448cb02b728ab4b9ed')
+auth_manager = SpotifyClientCredentials('id', 'secret')
 sp = spotipy.Spotify(auth_manager=auth_manager)
 
 playlists = sp.user_playlists('spotify')

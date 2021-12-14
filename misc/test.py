@@ -3,8 +3,8 @@ import spotipy
 from spotipy import oauth2
 
 PORT_NUMBER = 8080
-SPOTIPY_CLIENT_ID = '58d8a0730d2144e48ddea65b6033ad39'
-SPOTIPY_CLIENT_SECRET = '87ac3f4c385244448cb02b728ab4b9ed'
+SPOTIPY_CLIENT_ID = 'id'
+SPOTIPY_CLIENT_SECRET = 'secret'
 SPOTIPY_REDIRECT_URI = 'http://localhost:8080'
 SCOPE = 'user-library-read'
 CACHE = '.spotipyoauthcache'

@@ -9,7 +9,7 @@ redirect_uri = ''
 
 url = 'https://accounts.spotify.com/api/token'
 #auth_header = b64encode(six.text_type(client_id + ':' + client_secret).encode('ascii'))
-auth_header = '58d8a0730d2144e48ddea65b6033ad39:87ac3f4c385244448cb02b728ab4b9ed'
+auth_header = 'id:secret'
 headers = {'Authorization':'Basic %s' % auth_header}
 data = {'redirect_uri':redirect_uri,
     'code':code,

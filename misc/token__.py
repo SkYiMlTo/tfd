@@ -5,8 +5,8 @@ AUTH_URL = 'https://accounts.spotify.com/api/token'
 # POST
 auth_response = requests.post(AUTH_URL, {
     'grant_type': 'client_credentials',
-    'client_id': '58d8a0730d2144e48ddea65b6033ad39',
-    'client_secret': '87ac3f4c385244448cb02b728ab4b9ed',
+    'client_id': 'id',
+    'client_secret': 'secret',
     'scope': 'playlist-modify-public playlist-modify-private'
 })
 
