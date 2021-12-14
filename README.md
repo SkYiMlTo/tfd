@@ -1,17 +1,17 @@
 # TFD Project
 ## Who is tfd?
 TFD is an accronym, it means @technoflexdetente
-It's a group you can find on social network like:
-Facebook pages:
-- https://www.facebook.com/technoflexdetente
-- https://www.facebook.com/tfdrecords
-Facebook group:
-- https://www.facebook.com/groups/750514048382081
-Instagram:
-- https://www.instagram.com/technoflexdetente/
-- https://www.instagram.com/technoflexbackup/
-Spotify:
-https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4
+It's a group you can find on social network like:<br />
+Facebook pages:<br />
+- https://www.facebook.com/technoflexdetente<br />
+- https://www.facebook.com/tfdrecords<br />
+Facebook group:<br />
+- https://www.facebook.com/groups/750514048382081<br />
+Instagram:<br />
+- https://www.instagram.com/technoflexdetente/<br />
+- https://www.instagram.com/technoflexbackup/<br />
+Spotify:<br />
+https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4<br />
 
 
 Project mainly developped by SkY. project for @technoflexdetente
