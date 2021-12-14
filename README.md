@@ -28,12 +28,12 @@ L'objectif est de pouvoir gérer différentes playlists (en fonction des styles 
 - Les administrateurs pourront supprimer des musiques directement depuis le compte.
 
 ## Fonctionnement
-Sur le profil du compte spotify de TechnoFlexDetente nous pouvons observer différentes playlists collaboratives.
+<div style="text-align: justify">Sur le profil du compte spotify de TechnoFlexDetente nous pouvons observer différentes playlists collaboratives.
 ![image](https://user-images.githubusercontent.com/51914435/146085967-a9003369-47c6-4b83-af83-be425ad80b1f.png)
 Le code va fonctionner avec différentes playlists cachées pour synchroniser les sons. Dans le code on peut retrouver différentes notations C et NC signifiant respectivement collaborative et non collaborative. C'est un moyen pour se retrouver entre les différentes playlists. Chaque playlist aura donc un doublon caché permettant d'effectuer les synchronisations. C'est dans les playlists non collaboratives que les administrateurs auront la possibilité de supprimer des musiques.  
 Plutôt que d'utiliser des playlists cachées nous aurions pu effectuer des synchronisations sur la partie serveur, il aurait fallu trouver une autre implémentation pour que les administrateurs puissent supprimer des sons.  
   
-Pour ce qui est de la communication entre le script et le serveur, c'est l'API de spotify qui est utilisée.
+Pour ce qui est de la communication entre le script et le serveur, c'est l'API de spotify qui est utilisée.</div>
 
 ## Améliorations à venir
 Synchronisations des playlists avec celle d'un compte Deezer.
