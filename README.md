@@ -1,8 +1,8 @@
 # TechnoFlexDétente Project
 Their social networks :  
-<a href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="Spotify logo" width="20" height="20"></a><code>Spotify</coide>  
-<a href="https://www.facebook.com/technoflexdetente"><img src="https://user-images.githubusercontent.com/51914435/146082875-9915bcf7-e6dd-414e-9f7c-0f68e6802948.png" alt="Facebook logo" width="20" height="20"></a><code>Spotify</coide>  
-<a href="https://www.instagram.com/technoflexdetente/"><img src="https://user-images.githubusercontent.com/51914435/146082880-ab991b74-e77e-4738-bdbc-aa76af8109c0.png" alt="Instagram logo" width="20" height="20"></a><code>Spotify</coide>  
+<a href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="Spotify logo" width="20" height="20"></a><code>Spotify</code>  
+<a href="https://www.facebook.com/technoflexdetente"><img src="https://user-images.githubusercontent.com/51914435/146082875-9915bcf7-e6dd-414e-9f7c-0f68e6802948.png" alt="Facebook logo" width="20" height="20"></a><code>Spotify</code>  
+<a href="https://www.instagram.com/technoflexdetente/"><img src="https://user-images.githubusercontent.com/51914435/146082880-ab991b74-e77e-4738-bdbc-aa76af8109c0.png" alt="Instagram logo" width="20" height="20"></a><code>Spotify</code>  
 
 ## Who is tfd?
 TFD is an accronym, it means @technoflexdetente
