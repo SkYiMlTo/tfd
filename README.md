@@ -18,7 +18,7 @@ Sur les différents médias où ils sont présents, vous pourez trouver différe
 - Vente / Achat de place pour différents événements
 
 # Utilisation du projet
-Pour utiliser le projet, allez dans le dossier "final_project" et utilisez la commande suivante: (requiert python3)  
+Pour utiliser le projet, allez dans le dossier "final_project" et utilisez la commande suivante : (requiert python3)  
 <code>python3 main.py</code>  
 
 # Le projet en lui même
