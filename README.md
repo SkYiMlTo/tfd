@@ -1,4 +1,6 @@
 # TFD Project
+Their social networks :
+- <a href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="alt text" width="50" height="50"> Spotify</a>
 ## Who is tfd?
 TFD is an accronym, it means @technoflexdetente
 It's a group you can find on social network like:<br />
@@ -30,4 +32,4 @@ Next update in January 2022<br \><br \><br \>
 // <code><img height="20" src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png"/></code></a>
 
 # test2
-<a href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="alt text" width="50" height="50"></a>
+
