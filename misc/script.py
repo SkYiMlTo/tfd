@@ -13,5 +13,5 @@
 # headers = " -H ".join(headers)
 # return command.format(method=method, headers=headers, data=data, uri=uri)
 #
-# r = test_requests.post('curl -X "POST" "https://api.spotify.com/v1/playlists/6d0BMqF6SF59tCQHtwA2rP/tracks?uris=spotify%3Atrack%3A5AtpIUEM221ILCVt93RMj4" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQBjFFbtuM6dDZLoMYFfDgfx97bhuRTyY_cseu4T0fgBXLnYWnFl-OvZIa5GqvjCFYxA49TpKy5MceEAYOO6uHp7sS_05WhJVmsEy5qVCenqwpSAfBRXajuswO1SMynfiafKNfUw1rMDfvM9XNfMmw5cOFOQlj4sE5aNi_PjsUtXAs82MoKfjcY0UnkeVmlILbYcY0f_ZMw"')
+# r = test_requests.post('curl -X "POST" "https://api.spotify.com/v1/playlists/6d0BMqF6SF59tCQHtwA2rP/tracks?uris=spotify%3Atrack%3A5AtpIUEM221ILCVt93RMj4" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer token"')
 # r.json()
