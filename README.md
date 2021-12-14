@@ -50,6 +50,6 @@ Tout le code fonctionnel et nécessaire à l'exécution du projet est dans le do
 ## Améliorations à venir
 Synchronisations des playlists avec celle d'un compte Deezer.
 
-## Copyright
+# Copyright
 Projet entièrement réalisé par SkY.
 Il est open source.
