@@ -1,6 +1,7 @@
 <code> [This page is written in french, if you don' t understand this language, feel free to contact me and I'll explain you ;)]</code>
 # TechnoFlexDétente Project
-Leurs réseaux sociaux:  
+
+## Leurs réseaux sociaux  
 <a href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="Spotify logo" width="25" height="25"></a><code>Spotify</code>  
 <a href="https://discord.gg/xSp4z5aStx"><img src="https://user-images.githubusercontent.com/51914435/146083739-91a491de-8a4e-49a9-bb3b-bbe4cee5ce61.png" alt="Discord logo" width="25" height="25"></a><code>Discord</code>  
 <a href="https://www.facebook.com/technoflexdetente"><img src="https://user-images.githubusercontent.com/51914435/146082875-9915bcf7-e6dd-414e-9f7c-0f68e6802948.png" alt="Facebook logo" width="25" height="25"></a><code>Facebook</code>  
@@ -15,6 +16,12 @@ Sur les différents médias où ils sont présents, vous pourez trouver différe
 - Moyens de transport
 - Vente / Achat de matériel
 - Vente / Achat de place pour différents événements
+
+# Utilisation du projet
+Pour utiliser le projet, allez dans le dossier "final_project" et utilisez la commande suivante: (requiert python3)  
+<code>python3 main.py</code>  
+
+# Le projet en lui même
 
 ## Pourquoi ce projet ?
 Pour un groupe basé dans l'événementiel avoir un moyen de partage de musique au sein de la communauté est fortement souhaité. Lorsque l'on créé des playlists collaboratives sur Spotify tout le monde peut ajouter des musiques, ce aui répond bien à la demande. Cependant, tout le monde peut aussi en supprimer, c'est là qu'intervient ce projet...
@@ -34,6 +41,11 @@ Le code va fonctionner avec différentes playlists cachées pour synchroniser le
 Plutôt que d'utiliser des playlists cachées nous aurions pu effectuer des synchronisations sur la partie serveur, cependant il aurait fallu trouver une autre implémentation pour que les administrateurs puissent supprimer des sons. 
   
 Pour ce qui est de la communication entre le script et le serveur, c'est l'API de spotify qui est utilisée.
+
+## Segmentation du code
+Tout le code fonctionnel et nécessaire à l'exécution du projet est dans le dossier final project. Les autres dossiers sont des traces d'expérimentations avec l'api de spotify. Les fichiers textes servent de logs. Le projet est divisé en deux classes principales:  
+- InterfaceSpotifyApi : Permet une communication avec l'API de Spotify
+- PlaylistChecker : Effectue les vérifications dans les playlists
 
 ## Améliorations à venir
 Synchronisations des playlists avec celle d'un compte Deezer.
