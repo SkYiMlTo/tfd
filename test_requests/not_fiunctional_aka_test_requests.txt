@@ -1,0 +1,5 @@
+curl --request GET \
+    'https://api.spotify.com/v1/users/SkY_iMlTo/playlists' \
+     --header "Authorization: Bearer BQABu0iasDCPJsCnOF1GimfdnWVPYIyYcTrHNbs9YTu3XsRaplh5WhzyRU9Ccr4ODSSwYyxwdpAxHVFcz06myAanQ_qOfjgbJmhKdQ60DKSyI8bXSMjlRCV0W0bBxN_4EP5z2tnzUsT2vQ"
+
+curl -X "GET" "https://api.spotify.com/v1/users/SkY_iMlTo/playlists" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQABu0iasDCPJsCnOF1GimfdnWVPYIyYcTrHNbs9YTu3XsRaplh5WhzyRU9Ccr4ODSSwYyxwdpAxHVFcz06myAanQ_qOfjgbJmhKdQ60DKSyI8bXSMjlRCV0W0bBxN_4EP5z2tnzUsT2vQ"

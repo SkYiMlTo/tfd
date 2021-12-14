@@ -1,0 +1,23 @@
+https://accounts.spotify.com/authorize?client_id=58d8a0730d2144e48ddea65b6033ad39&scopes=playlist-read-collaborative&response_type=token&redirect_uri=http://localhost:8080
+
+6d0BMqF6SF59tCQHtwA2rP
+
+
+
+https://accounts.spotify.com/authorize?client_id=7c237c11ac7b498e9454371d425cb2e4&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080&scope=playlist-modify-public%20playlist-modify-private
+
+58d8a0730d2144e48ddea65b6033ad39:87ac3f4c385244448cb02b728ab4b9ed
+
+curl -H "Authorisation: Basic NThkOGEwNzMwZDIxNDRlNDhkZGVhNjViNjAzM2FkMzk6ODdhYzNmNGMzODUyNDQ0NDhjYjAyYjcyOGFiNGI5ZWQ=" -d grant_type=authorization_code -d code=AQBsgBRZor1tzmlD-1XaSuUpsThnGGfpxwE9E6alQmRC5LsshYfZbmMb17A8FzFrNtS8kizZjewvuiyV2YKlFWNIER2RHbS-H_mIHAIjncHafGBvgvJtrc0B497QG16SZX7JZ6A0PLEJ-epnO-6Z4jhIL17_e-v51EvRr3SyEQrxR8ZIcAwB_-QtTXSDGjmtXN0T9ki8gFWV7Y7ONVZCXlL3WElF5uqMIts -d redirect_uri=http%3A%2F%2Flocalhost%3A8080 https://accounts.spotify.com/api/token --ssl-no-revoke
+
+
+curl -d client_id=58d8a0730d2144e48ddea65b6033ad39 -d client_secret=87ac3f4c385244448cb02b728ab4b9ed -d grant_type=authorization_code -d code=AQDIZRtt-W_r0i7I26gSauRA3515mJVdq7nsFqoCQvva0ANcRmHLiDx1-urytsftPRTSyhU5vzokk2wmohP2HIl3CxJLfRd6Tji6MqxnsItJdA8MgtL62ooNomV3ecWpDJDG4PMXpOudnqbxl1rXY2mGsI6tFKUunELuecysBgl6TdCCoTwGjOsse08A7eSuHHPhZmgywsVDVM93235LnofZuvp2ywJIvE8 -d redirect_uri=http%3A%2F%2Flocalhost%3A8080 https://accounts.spotify.com/api/token
+
+curl -d client_id=58d8a0730d2144e48ddea65b6033ad39 -d grant_type=refresh_token -d refresh_token=AQB07a1ms9rF3sfmODjiRWD0yUneomNdcYgPacMaOfKt3Qqt2hh5UOxYrzAPphucfgglWARA7A8tJ72n6P0oybbqyEljcMsf-PyEElYvHNOQ8cXWJLwn2Tj-iCCEq9nuJUw https://accounts.spotify.com/api/token
+
+curl -H "Content-type: application/x-www-form-urlencoded" -X POST https://accounts.spotify.com/api/token -d client_id=58d8a0730d2144e48ddea65b6033ad39 -d grant_type=refresh_token -d refresh_token=AQB07a1ms9rF3sfmODjiRWD0yUneomNdcYgPacMaOfKt3Qqt2hh5UOxYrzAPphucfgglWARA7A8tJ72n6P0oybbqyEljcMsf-PyEElYvHNOQ8cXWJLwn2Tj-iCCEq9nuJUw
+
+curl -d client_id=58d8a0730d2144e48ddea65b6033ad39 -d client_secret=87ac3f4c385244448cb02b728ab4b9ed -d grant_type=refresh_token -d refresh_token=AQB07a1ms9rF3sfmODjiRWD0yUneomNdcYgPacMaOfKt3Qqt2hh5UOxYrzAPphucfgglWARA7A8tJ72n6P0oybbqyEljcMsf-PyEElYvHNOQ8cXWJLwn2Tj-iCCEq9nuJUw https://accounts.spotify.com/api/token
+
+Refresh token:
+AQB07a1ms9rF3sfmODjiRWD0yUneomNdcYgPacMaOfKt3Qqt2hh5UOxYrzAPphucfgglWARA7A8tJ72n6P0oybbqyEljcMsf-PyEElYvHNOQ8cXWJLwn2Tj-iCCEq9nuJUw

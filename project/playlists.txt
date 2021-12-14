@@ -1,0 +1,4 @@
+ID,name,C,NC
+1,acid,3xFQXlI7Xf93UzQXpuFqEs,28bNg1uPJd9kA4v9F6NuwH
+2,indus,0SZnk7LXUQZYYuZOjqR8aj,3ahGslXhmvLwjIL3w2RMBx
+3,tek,2a7xCqIwdk8X4JJZlsu5Av,1LjKB9OjzMG1DXShDVaZtY

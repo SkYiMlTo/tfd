@@ -1,0 +1,9 @@
+ID,name,C,NC
+1,acid,3xFQXlI7Xf93UzQXpuFqEs,28bNg1uPJd9kA4v9F6NuwH
+2,indus,0SZnk7LXUQZYYuZOjqR8aj,3ahGslXhmvLwjIL3w2RMBx
+3,hardtek,2a7xCqIwdk8X4JJZlsu5Av,1LjKB9OjzMG1DXShDVaZtY
+4,tribe,3r9cHEbvLZC4cdo2xnmdOO,6D4nqcFrLKWEXp3KMlRIrx
+5,electro,0WNkTpIKbMkqDaCKqoddwp,6MYOcOhpeOyGjvA5ZvXssn
+6,minimal,5hIkCUUBX8U4sP8fbOglr3,131oxTexoNzDM306ZDWbQY
+7,psytrance,2AFBcBPyN8tUZgE6vKIS3W,50srvjpfLU3aIL2UM7iJI3
+8,hardcore,3qS414wyyAvw9pbkT18lCM,1nrjH6dJZhi21SAkXaWX2Y
