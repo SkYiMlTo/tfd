@@ -2,7 +2,7 @@
 # TechnoFlexDétente Project
 
 ## Leurs réseaux sociaux  
-<a href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="Spotify logo" width="25" height="25"></a><code>Spotify</code>  
+<a target="_blank" href="https://open.spotify.com/user/3125yxg52epfvjn26ih6h6mzjvdu?si=0d4b571dc7fa4dc4"><img src="https://user-images.githubusercontent.com/51914435/146079798-ed8d886f-81df-4581-aa3b-626e49124c34.png" alt="Spotify logo" width="25" height="25"></a><code>Spotify</code>  
 <a href="https://discord.gg/xSp4z5aStx"><img src="https://user-images.githubusercontent.com/51914435/146083739-91a491de-8a4e-49a9-bb3b-bbe4cee5ce61.png" alt="Discord logo" width="25" height="25"></a><code>Discord</code>  
 <a href="https://www.facebook.com/technoflexdetente"><img src="https://user-images.githubusercontent.com/51914435/146082875-9915bcf7-e6dd-414e-9f7c-0f68e6802948.png" alt="Facebook logo" width="25" height="25"></a><code>Facebook</code>  
 <a href="https://www.instagram.com/technoflexdetente/"><img src="https://user-images.githubusercontent.com/51914435/146082880-ab991b74-e77e-4738-bdbc-aa76af8109c0.png" alt="Instagram logo" width="25" height="25"></a><code>Instagram</code>  
