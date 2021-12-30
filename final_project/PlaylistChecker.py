@@ -53,9 +53,10 @@ class PlaylistChecker:
         NC_items = self.return_tracks_playlist(NC)
         return C_items, NC_items
 
-    def remove_duplicates(self, playlist_id, tracks):
+    def remove_duplicates(self, playlist_id, tracks, f, playlist):
         duplicates_tracks = [item for item, count in collections.Counter(tracks).items() if count > 1]
         for track in duplicates_tracks:
+            f.write("Playlist " + ("collaborative", "non collaborative ")[playlist] + " | Duplicat retire: " + str(track) + "\n")
             self.__interface_spotify_api.delete_song(playlist_id, track)
             self.__interface_spotify_api.add_song_here(playlist_id, track)
 
@@ -109,9 +110,9 @@ class PlaylistChecker:
         current_C_items, current_NC_items = self.get_tracks_main(C, NC)
 
         # Remove potential duplicates in C
-        self.remove_duplicates(C, current_C_items)
+        self.remove_duplicates(C, current_C_items, f, 0)
         current_C_items = list(set(current_C_items))
-        self.remove_duplicates(NC, current_NC_items)
+        self.remove_duplicates(NC, current_NC_items, f, 1)
         current_NC_items = list(set(current_NC_items))
 
         # Check deleted and added tracks
