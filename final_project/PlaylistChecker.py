@@ -15,7 +15,7 @@ class PlaylistChecker:
 
     def get_playlists(self, file):
         playlists = []
-        saved_songs = dict()
+        saved_songs = {}
         with open(file) as f:
             line = f.readline().rstrip()
             while line:
@@ -34,17 +34,15 @@ class PlaylistChecker:
         try:
             while r['items']:
                 tracks = r['items']
-                for elem in tracks:
-                    playlist_elems.append(elem['track']['id'])
+                playlist_elems.extend(elem['track']['id'] for elem in tracks)
                 OFFSET += 100
                 r = self.__interface_spotify_api.get_tracks(playlist_id, OFFSET).json()
         except KeyError:
-            f = open("errors.txt", "a")
-            f.write(
-                "[" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "] - Impossible de recuperer les musique de la playlist: "
-                                                                     "" + playlist_id + " | Erreur: " + str(KeyError) +
-                "\n")
-            f.close()
+            with open("errors.txt", "a") as f:
+                f.write(
+                    "[" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "] - Impossible de recuperer les musique de la playlist: "
+                                                                         "" + playlist_id + " | Erreur: " + str(KeyError) +
+                    "\n")
         # print("Nb elems find:" + str(len(playlist_elems)))
         return playlist_elems
 
@@ -62,27 +60,21 @@ class PlaylistChecker:
 
     def compare_playlists(self, current_C_items, current_NC_items):
         more_tracks_in_C, more_items_in_NC = [], []
-        for track in current_C_items:
-            if track not in current_NC_items:
-                more_tracks_in_C.append(track)
-        for track in current_NC_items:
-            if track not in current_C_items:
-                more_items_in_NC.append(track)
+        more_tracks_in_C.extend(
+            track for track in current_C_items if track not in current_NC_items
+        )
+
+        more_items_in_NC.extend(
+            track for track in current_NC_items if track not in current_C_items
+        )
+
         return more_tracks_in_C, more_items_in_NC
 
     def NC_deleted_tracks(self, current, save):
-        deleted_elements = []
-        for elem in save:
-            if elem not in current:
-                deleted_elements.append(elem)
-        return deleted_elements
+        return [elem for elem in save if elem not in current]
 
     def C_added_tracks(self, current, save):
-        added_elements = []
-        for elem in current:
-            if elem not in save:
-                added_elements.append(elem)
-        return added_elements
+        return [elem for elem in current if elem not in save]
 
     def main_playlist_checker(self):
         while True:
@@ -95,12 +87,11 @@ class PlaylistChecker:
             time.sleep(60)
 
     def update_playlists(self):
-        f = open("update_playlists_logs.txt", "a")
-        f.write("----------\n")
-        for playlist in self.__playlists:
-            self.update_playlist(playlist[1], playlist[2], playlist[0], f)
-        f.write("----------\n\n")
-        f.close()
+        with open("update_playlists_logs.txt", "a") as f:
+            f.write("----------\n")
+            for playlist in self.__playlists:
+                self.update_playlist(playlist[1], playlist[2], playlist[0], f)
+            f.write("----------\n\n")
 
     def update_playlist(self, C, NC, name, f):
         f.write("[" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "] - Beginning update playlist " + name + "\n")

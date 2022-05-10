@@ -31,7 +31,7 @@ BASE_URL = 'https://api.spotify.com/v1/'
 playlist_id = '6d0BMqF6SF59tCQHtwA2rP'
 
 # actual GET request with proper header
-r = requests.get(BASE_URL + 'playlists/' + playlist_id + '/tracks', headers=headers)
+r = requests.get(f'{BASE_URL}playlists/{playlist_id}/tracks', headers=headers)
 # r = test_requests.post("https://api.spotify.com/v1/playlists/6d0BMqF6SF59tCQHtwA2rP/tracks?uris=spotify%3Atrack%3A5AtpIUEM221ILCVt93RMj4", headers=headers)
 r = r.json()
 print(r)

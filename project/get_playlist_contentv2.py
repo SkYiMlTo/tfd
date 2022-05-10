@@ -8,18 +8,20 @@ def add_song_here(playlist_id, track_id, TOKEN):
     headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + TOKEN,
+        'Authorization': f'Bearer {TOKEN}',
     }
 
-    params = (
-        ('uris', 'spotify:track:' + track_id),
-    )
+
+    params = (('uris', f'spotify:track:{track_id}'), )
 
     C = "7Je5n5Eh00MEiq27PSAkT9"
     NC = "6d0BMqF6SF59tCQHtwA2rP"
 
-    response = requests.post('https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks', headers=headers,
-                             params=params)
+    response = requests.post(
+        f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        headers=headers,
+        params=params,
+    )
 
 
 def get_tracks(playlist_id, OFFSET, TOKEN):
@@ -28,17 +30,19 @@ def get_tracks(playlist_id, OFFSET, TOKEN):
     headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + TOKEN,
+        'Authorization': f'Bearer {TOKEN}',
     }
+
 
     params = (
         ('fields', 'items(track(id))'),
     )
 
-    response = requests.get(
-        'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks?limit=100&offset=' + str(OFFSET), headers=headers,
-        params=params)
-    return response
+    return requests.get(
+        f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=100&offset={str(OFFSET)}',
+        headers=headers,
+        params=params,
+    )
     # NB. Original query string below. It seems impossible to parse and
     # reproduce query strings 100% accurately so the one below is given
     # in case the reproduced version is not "correct".
@@ -51,8 +55,7 @@ def return_tracks_playlist(playlist_id, TOKEN):
     r = get_tracks(playlist_id, OFFSET, TOKEN).json()
     while r['items']:
         tracks = r['items']
-        for elem in tracks:
-            playlist_elems.append(elem['track']['id'])
+        playlist_elems.extend(elem['track']['id'] for elem in tracks)
         OFFSET += 100
         r = get_tracks(playlist_id, OFFSET, TOKEN).json()
     # print("Nb elems find:" + str(len(playlist_elems)))
@@ -105,13 +108,18 @@ def delete_song(playlist_id, track_id, TOKEN):
     headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + TOKEN,
+        'Authorization': f'Bearer {TOKEN}',
     }
+
 
     data = '{"tracks":[{"uri":"spotify:track:' + track_id + '"}]}'
 
-    response = requests.delete('https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks', headers=headers,
-                               data=data)
+    response = requests.delete(
+        f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+        headers=headers,
+        data=data,
+    )
+
     print(response.json())
 
 
@@ -132,29 +140,25 @@ def refresh_access_token():
 
 
 def NC_deleted_tracks(current, save):
-    deleted_elements = []
-    for elem in save:
-        if elem not in current:
-            deleted_elements.append(elem)
-    return deleted_elements
+    return [elem for elem in save if elem not in current]
 
 
 def C_added_tracks(current, save, current_NC):
-    added_elements = []
-    for elem in current:
-        if elem not in save and elem not in current_NC:
-            added_elements.append(elem)
-    return added_elements
+    return [
+        elem for elem in current if elem not in save and elem not in current_NC
+    ]
 
 
 def compare_playlists(current_C_items, current_NC_items):
     more_tracks_in_C, more_items_in_NC = [], []
-    for track in current_C_items:
-        if track not in current_NC_items:
-            more_tracks_in_C.append(track)
-    for track in current_NC_items:
-        if track not in current_C_items:
-            more_items_in_NC.append(track)
+    more_tracks_in_C.extend(
+        track for track in current_C_items if track not in current_NC_items
+    )
+
+    more_items_in_NC.extend(
+        track for track in current_NC_items if track not in current_C_items
+    )
+
     return more_tracks_in_C, more_items_in_NC
 
 
