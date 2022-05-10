@@ -12,7 +12,4 @@ playlists = sp.user_playlists('spotify')
 while playlists:
     for i, playlist in enumerate(playlists['items']):
         print("%4d %s %s" % (i + 1 + playlists['offset'], playlist['uri'],  playlist['name']))
-    if playlists['next']:
-        playlists = sp.next(playlists)
-    else:
-        playlists = None
+    playlists = sp.next(playlists) if playlists['next'] else None

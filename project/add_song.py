@@ -28,7 +28,11 @@ params = (
 C = "7Je5n5Eh00MEiq27PSAkT9"
 NC = "6d0BMqF6SF59tCQHtwA2rP"
 
-response = requests.post('https://api.spotify.com/v1/playlists/' + C + '/tracks', headers=headers, params=params)
+response = requests.post(
+    f'https://api.spotify.com/v1/playlists/{C}/tracks',
+    headers=headers,
+    params=params,
+)
 
 #NB. Original query string below. It seems impossible to parse and
 #reproduce query strings 100% accurately so the one below is given

@@ -32,23 +32,24 @@ class InterfaceSpotifyApi:
         # print(response)
         self.__access_token = response['access_token']
         self.__access_token_expiration_date = time.time() + 3600  # Token expire au bout de 1H (soit 3600 secs)
-        f = open("access_token.txt", "a")
-        f.write("[" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "] - New access token generated\n")
-        f.close()
+        with open("access_token.txt", "a") as f:
+            f.write("[" + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + "] - New access token generated\n")
 
     def add_song_here(self, playlist_id, track_id):
         headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + self.__access_token,
+            'Authorization': f'Bearer {self.__access_token}',
         }
 
-        params = (
-            ('uris', 'spotify:track:' + track_id),
-        )
 
-        response = requests.post('https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks', headers=headers,
-                                 params=params)
+        params = (('uris', f'spotify:track:{track_id}'), )
+
+        response = requests.post(
+            f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+            headers=headers,
+            params=params,
+        )
 
     def get_tracks(self, playlist_id, OFFSET):
         import requests
@@ -56,18 +57,19 @@ class InterfaceSpotifyApi:
         headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + self.__access_token,
+            'Authorization': f'Bearer {self.__access_token}',
         }
+
 
         params = (
             ('fields', 'items(track(id))'),
         )
 
-        response = requests.get(
-            'https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks?limit=100&offset=' + str(OFFSET),
+        return requests.get(
+            f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks?limit=100&offset={str(OFFSET)}',
             headers=headers,
-            params=params)
-        return response
+            params=params,
+        )
         # NB. Original query string below. It seems impossible to parse and
         # reproduce query strings 100% accurately so the one below is given
         # in case the reproduced version is not "correct".
@@ -77,11 +79,16 @@ class InterfaceSpotifyApi:
         headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + self.__access_token,
+            'Authorization': f'Bearer {self.__access_token}',
         }
+
 
         data = '{"tracks":[{"uri":"spotify:track:' + track_id + '"}]}'
 
-        response = requests.delete('https://api.spotify.com/v1/playlists/' + playlist_id + '/tracks', headers=headers,
-                                   data=data)
+        response = requests.delete(
+            f'https://api.spotify.com/v1/playlists/{playlist_id}/tracks',
+            headers=headers,
+            data=data,
+        )
+
         print(response.json())
